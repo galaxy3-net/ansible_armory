@@ -15,6 +15,12 @@
     dest: /home/vagrant/armory
     version: armory
 
+- name: Clone Armory to /Armory
+  git:
+    repo: https://github.com/galaxy3-net/armory.git
+    dest: /Armory
+    version: armory
+
 - name: Start DHCPD
   command:
     chdir: "/home/vagrant/armory/dhcp"
