@@ -21,3 +21,5 @@
     build: yes
     remove_orphans: yes
     started: yes
+    files:
+      - docker-compose.yml
