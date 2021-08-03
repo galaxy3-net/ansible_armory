@@ -12,6 +12,12 @@
 - name: Clone Armory
   git:
     repo: https://github.com/galaxy3-net/armory.git
-    dest: /home/vagrant/armory2
+    dest: /home/vagrant/armory
     version: armory
 
+- name: Start DHCPD
+  docker_compose:
+    definition: /home/vagrant/armory/dhcpd
+    build: yes
+    remove_orphans: yes
+    started: yes
