@@ -1,0 +1,18 @@
+---
+# tasks file for ansible
+
+- name: Show Hostname
+  debug:
+    msg: "Hostname is {{ ansible_hostname }} - {{ ansible_os_family }}"
+
+- name: Print all available facts
+  ansible.builtin.debug:
+    var: ansible_facts
+
+- name: Clone Armory
+  git:
+    repo:
+    dest: /home/vagrant/armory2
+    single_branch: yes
+    version: armory
+
