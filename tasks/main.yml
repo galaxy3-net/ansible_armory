@@ -9,11 +9,11 @@
   ansible.builtin.debug:
     var: ansible_facts
 
-- name: Clone Armory
-  git:
-    repo: https://github.com/galaxy3-net/armory.git
-    dest: /home/vagrant/armory
-    version: armory
+#- name: Clone Armory
+#  git:
+#    repo: https://github.com/galaxy3-net/armory.git
+#    dest: /home/vagrant/armory
+#    version: armory
 
 - name: Clone Armory to /Armory
   git:
@@ -28,9 +28,10 @@
 
 - name:  CRON to update Armory
   cron:
+    name: "update_armory"
     hour: "*/2"
     minute: "03"
     user: "vagrant"
-    job: "chdir /home/vagrant/armory && git pull >> /home/vagrant/armory_cron.log"
+    job: "chdir /Armory && git pull >> /home/vagrant/armory_cron.log"
 
 
