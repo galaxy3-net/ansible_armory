@@ -11,8 +11,8 @@
 
 - name: Clone Armory
   git:
-    repo:
+    repo: https://github.com/galaxy3-net/armory.git
     dest: /home/vagrant/armory2
-    single_branch: yes
+    single_branch: clone
     version: armory
 
