@@ -13,6 +13,5 @@
   git:
     repo: https://github.com/galaxy3-net/armory.git
     dest: /home/vagrant/armory2
-    single_branch: clone
     version: armory
 
