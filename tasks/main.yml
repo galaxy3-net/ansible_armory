@@ -20,6 +20,11 @@
     chdir: "/home/vagrant/armory/dhcp"
     cmd: "bin/up"
 
-
+- name:  CRON to update Armory
+  cron:
+    hour: */2
+    minute: 03
+    user: "vagrant"
+    job: "chdir /home/vagrant/armory && git pull >> /home/vagrant/armory_cron.log"
 
 
