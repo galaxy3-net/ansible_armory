@@ -23,7 +23,7 @@
 
 - name: Start DHCPD
   command:
-    chdir: "/home/vagrant/armory/dhcp"
+    chdir: "/Armory/dhcp"
     cmd: "bin/up"
 
 - name:  CRON to update Armory
