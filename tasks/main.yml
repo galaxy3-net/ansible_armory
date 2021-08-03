@@ -17,9 +17,9 @@
 
 - name: Start DHCPD
   docker_compose:
-    definition: /home/vagrant/armory/dhcpd
-    build: yes
-    remove_orphans: yes
-    started: yes
+    project_src: /home/vagrant/armory/dhcpd
     files:
       - docker-compose.yml
+#    build: yes
+#    remove_orphans: yes
+#    started: yes
