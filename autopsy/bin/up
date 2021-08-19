@@ -1,3 +1,0 @@
-#!/usr/sbin/env bash
-
-ansible-playbook --connection=local autopsy.yml
